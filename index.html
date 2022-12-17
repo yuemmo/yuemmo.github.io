@@ -2,19 +2,47 @@
 <html lang="en-US">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>portfolio</title>
         <style>
-            p{
-                color: red;
+            * {
+                font-family: "Helvetica Neue", "Arial", sans-serif;
+             }
+             
+            .btn
+            {
+                color:black;
+                background-color: white;
+                padding: 10px 10px;
+                width: calc(80% / 5);
+                border: none;
+                outline: none;
+                overflow: hidden;
+                cursor: pointer;
             }
-            .images{
+            .btn:hover
+            {
+                color: white;
+                background-color: black;
+            }
+            .btn.active
+            {
+                border-width: 1px;
+                border-style: solid none;
+            }
+            @media screen and (max-width: 800px) 
+            {
+                .btn{width: 100%;}
+            }
+
+            .images
+            {
                 margin-top:20px;
                 overflow: hidden;
-
             }
 
-            .filterBtn{
+            .dispImg
+            {
                 float: left;
                 background-color: blueviolet;
                 color:azure;
@@ -22,53 +50,57 @@
                 line-height: 100px;
                 text-align:center;
                 margin:2px;
-                display:none;
+                display:block;
             }
-            .btn{
-                border: none;
-                outline: none;
-                padding: 12px 16px;
-                background-color: cyan;
-                cursor: pointer;
-                color:black;
-            }
-            .btn:hover{
-                background-color: magenta;
-            }
-            .btn.active{
-                background-color:red;
 
+            p
+            {
+                color: red;
             }
         </style>
     </head>
 
     <body>
-        <h1 style="text-align: center;">yuemmo</h1>
-        <div style="text-align: center;" id="buttons">
-            <Button class="btn active">all</Button>
-            <Button class="btn">comics</Button>
-            <Button class="btn">illustrations</Button>
-            <Button class="btn">graphic design</Button>
-            <Button class="btn">miscellaneous work</Button>
+        <h1 style="text-align: center;">Y U E M M O</h1>
+        
+        <div style="text-align: center;" id="myBtnContainer">
+            <Button class="btn active" onclick="filter('all')">ALL</Button>
+            <Button class="btn" onclick="filter('comic')">COMICS</Button>
+            <Button class="btn" onclick="filter('illus')">ILLUSTRATIONS</Button>
+            <Button class="btn" onclick="filter('design')">DESIGN</Button>
+            <Button class="btn" onclick="filter('misc')">MISCELLANEOUS</Button>
         </div>
 
         <div class="images">
-            <div class="filterBtn illus">A</div>
-            <div class="filterBtn comic design">BB</div>
-            <div class="filterBtn illus">CCC</div>
-            <div class="filterBtn comic">D</div>
-            <div class="filterBtn illus misc">EE</div>
-            <div class="filterBtn comic">FFF</div>
-            <div class="filterBtn misc">G</div>
-            <div class="filterBtn misc">HH</div>
-            <div class="filterBtn design">III</div>
-            <div class="filterBtn design misc">J</div>
-            <div class="filterBtn design">KK</div>
-            <div class="filterBtn design">LLL</div>
+            <div class="dispImg illus">A</div>
+            <div class="dispImg comic design">BB</div>
+            <div class="dispImg illus">CCC</div>
+            <div class="dispImg comic">D</div>
+            <div class="dispImg illus misc">EE</div>
+            <div class="dispImg comic">FFF</div>
+            <div class="dispImg misc">G</div>
+            <div class="dispImg misc">HH</div>
+            <div class="dispImg design">III</div>
+            <div class="dispImg design misc">J</div>
+            <div class="dispImg design">KK</div>
+            <div class="dispImg design">LLL</div>
         </div>
 
         <p>under construction…</p>
         
 
+        <script>
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) 
+            {
+                btns[i].addEventListener("click", function()
+                {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className+= " active";
+                })
+            }
+        </script>
     </body>
 </html>

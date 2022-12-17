@@ -5,25 +5,70 @@
         <meta name="viewport" content="width=device-width" />
         <title>portfolio</title>
         <style>
-            .title{
-                text-align: center;
-            }
-            h1 {
-
-            }
-
             p{
                 color: red;
+            }
+            .images{
+                margin-top:20px;
+                overflow: hidden;
+
+            }
+
+            .filterBtn{
+                float: left;
+                background-color: blueviolet;
+                color:azure;
+                width:100px;
+                line-height: 100px;
+                text-align:center;
+                margin:2px;
+                display:none;
+            }
+            .btn{
+                border: none;
+                outline: none;
+                padding: 12px 16px;
+                background-color: cyan;
+                cursor: pointer;
+                color:black;
+            }
+            .btn:hover{
+                background-color: magenta;
+            }
+            .btn.active{
+                background-color:red;
+
             }
         </style>
     </head>
 
     <body>
-        <div class="title">
-            <h1>hi!</h1>
+        <h1 style="text-align: center;">yuemmo</h1>
+        <div style="text-align: center;" id="buttons">
+            <Button class="btn active">all</Button>
+            <Button class="btn">comics</Button>
+            <Button class="btn">illustrations</Button>
+            <Button class="btn">graphic design</Button>
+            <Button class="btn">miscellaneous work</Button>
         </div>
-        
+
+        <div class="images">
+            <div class="filterBtn illus">A</div>
+            <div class="filterBtn comic design">BB</div>
+            <div class="filterBtn illus">CCC</div>
+            <div class="filterBtn comic">D</div>
+            <div class="filterBtn illus misc">EE</div>
+            <div class="filterBtn comic">FFF</div>
+            <div class="filterBtn misc">G</div>
+            <div class="filterBtn misc">HH</div>
+            <div class="filterBtn design">III</div>
+            <div class="filterBtn design misc">J</div>
+            <div class="filterBtn design">KK</div>
+            <div class="filterBtn design">LLL</div>
+        </div>
+
         <p>under construction…</p>
+        
 
     </body>
 </html>

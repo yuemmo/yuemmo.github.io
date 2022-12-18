@@ -6,6 +6,10 @@
         <title>portfolio</title>
         <link rel="icon" type="image/x-icon" href="images/doraemon.png">
         <style>
+            *
+            {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
             body, a:hover
             {
                 cursor: url('images/doraemonSmall.png'), default;
@@ -36,17 +40,32 @@
             .dispImg
             {
                 float: left;
-                background-color: blueviolet;
                 color:azure;
-                width:200px;
+                background-color: blueviolet;
+                width: 200px;
                 line-height: 300px;
-                text-align:center;
-                margin:2px;
+                margin:10px;
+                border: none;
+                outline: none;
+                overflow: hidden;
+                cursor: url('images/doraemonSmall.png'), default;
                 display:none;
+            }
+            .dispImg:hover
+            {
+                color: white;
+                background-color: peru;
+            }
+            .dispImg.display
+            {
+                color: white;
+                background-color: palevioletred;
             }
             .images
             {
-                margin-top:20px;
+                text-align: center; 
+                white-space: normal; 
+                margin-top:50px;
                 overflow: hidden;
             }
             .show
@@ -98,19 +117,19 @@
         </div>
 
         
-        <div class="images">
-            <div class="dispImg illus">A</div>
-            <div class="dispImg comic design">BB</div>
-            <div class="dispImg illus">CCC</div>
-            <div class="dispImg comic">D</div>
-            <div class="dispImg illus misc">EE</div>
-            <div class="dispImg comic">FFF</div>
-            <div class="dispImg misc">G</div>
-            <div class="dispImg misc">HH</div>
-            <div class="dispImg design">III</div>
-            <div class="dispImg design misc">J</div>
-            <div class="dispImg design">KK</div>
-            <div class="dispImg design">LLL</div>
+        <div class="images" id="myImgContainer" >
+            <Button class="dispImg display illus" onclick="">A</Button>
+            <Button class="dispImg comic design" onclick="">BB</Button>
+            <Button class="dispImg illus" onclick="">CCC</Button>
+            <Button class="dispImg comic" onclick="">D</Button>
+            <Button class="dispImg illus misc" onclick="">EE</Button>
+            <Button class="dispImg comic" onclick="">FFF</Button>
+            <Button class="dispImg misc" onclick="">G</Button>
+            <Button class="dispImg misc" onclick="">HH</Button>
+            <Button class="dispImg design" onclick="">III</Button>
+            <Button class="dispImg design misc" onclick="">J</Button>
+            <Button class="dispImg design" onclick="">KK</Button>
+            <Button class="dispImg design" onclick="">LLL</Button>
         </div>   
         
         <script>

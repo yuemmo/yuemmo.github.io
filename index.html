@@ -4,10 +4,12 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>portfolio</title>
+        <link rel="icon" type="image/x-icon" href="images/doraemon.png">
         <style>
-            * {
-                font-family: "Helvetica Neue", "Arial", sans-serif;
-             }
+            body, a:hover
+            {
+                cursor: url('images/doraemonSmall.png'), default;
+            }
              
             .btn
             {
@@ -18,7 +20,7 @@
                 border: none;
                 outline: none;
                 overflow: hidden;
-                cursor: pointer;
+                cursor: url('images/doraemonSmall.png'), default;
             }
             .btn:hover
             {
@@ -30,15 +32,9 @@
                 border-width: 1px;
                 border-style: solid none;
             }
-            @media screen and (max-width: 800px) 
+            @media screen and (max-width: 950px) 
             {
                 .btn{width: 100%;}
-            }
-
-            .images
-            {
-                margin-top:20px;
-                overflow: hidden;
             }
 
             .dispImg
@@ -50,8 +46,20 @@
                 line-height: 100px;
                 text-align:center;
                 margin:2px;
-                display:block;
+                display:none;
             }
+            .show
+            {
+                display: block;
+
+            }
+            .images
+            {
+                margin-top:20px;
+                overflow: hidden;
+            }
+
+            
 
             p
             {
@@ -61,14 +69,16 @@
     </head>
 
     <body>
-        <h1 style="text-align: center;">Y U E M M O</h1>
+        <h1 style="text-align: center;">
+            ﾟ･:ﾟ･:,｡★ ＼(◌ˇ‿ˇ◌ )♪ 欢迎光临 ♪( ◌ˇ‿ˇ◌)/ ★,｡･:･ﾟ
+        </h1>
         
         <div style="text-align: center;" id="myBtnContainer">
-            <Button class="btn active" onclick="filter('all')">ALL</Button>
-            <Button class="btn" onclick="filter('comic')">COMICS</Button>
-            <Button class="btn" onclick="filter('illus')">ILLUSTRATIONS</Button>
-            <Button class="btn" onclick="filter('design')">DESIGN</Button>
-            <Button class="btn" onclick="filter('misc')">MISCELLANEOUS</Button>
+            <Button class="btn active" onclick="filterTag('all')">全部 ALL</Button>
+            <Button class="btn" onclick="filterTag('comic')">漫画 COMICS</Button>
+            <Button class="btn" onclick="filterTag('illus')">绘画 ILLUSTRATIONS</Button>
+            <Button class="btn" onclick="filterTag('design')">设计 DESIGN</Button>
+            <Button class="btn" onclick="filterTag('misc')">其它 MISCELLANEOUS</Button>
         </div>
 
         <div class="images">
@@ -100,6 +110,43 @@
                     current[0].className = current[0].className.replace(" active", "");
                     this.className+= " active";
                 })
+            }
+        </script>
+
+        <script>
+            filterTag("all");
+
+            function filterTag(c)
+            {
+                var x = document.getElementsByClassName("dispImg");
+                if (c == "all") c = "";
+                for (var i = 0; i < x.length; i++)
+                {
+                    removeImg(x[i]); 
+                    if (x[i].className.indexOf(c) > -1) 
+                    {
+                        addImg(x[i]);
+                    }
+                }
+            }
+
+            function addImg(tags)
+            {
+                var t = tags.className.split(" ");
+                if (t.indexOf("show") == -1)
+                {
+                    tags.className += " show";
+                }
+            }
+
+            function removeImg(tags)
+            {
+                var t = tags.className.split(" ");
+                while (t.indexOf("show") > -1)
+                {
+                    t.splice(t.indexOf("show"), 1);
+                }
+                tags.className=t.join(" ");
             }
         </script>
     </body>

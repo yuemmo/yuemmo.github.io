@@ -10,6 +10,18 @@
             {
                 cursor: url('images/doraemonSmall.png'), default;
             }
+            @media screen and (max-width: 950px) 
+            {
+                .btn{width: 100%;}
+                .smallScreen{display:initial;}
+                .largeScreen{display:none;}
+            }
+            @media screen and (min-width: 951px) 
+            {
+                .btn{width: calc(80% / 5);}
+                .smallScreen{display:none;}
+                .largeScreen{display:initial;}
+            }
              
             .btn
             {
@@ -32,10 +44,7 @@
                 border-width: 1px;
                 border-style: solid none;
             }
-            @media screen and (max-width: 950px) 
-            {
-                .btn{width: 100%;}
-            }
+            
 
             .dispImg
             {
@@ -69,9 +78,13 @@
     </head>
 
     <body>
-        <h1 style="text-align: center;">
-            ﾟ･:ﾟ･:,｡★ ＼(◌ˇ‿ˇ◌ )♪ 欢迎光临 ♪( ◌ˇ‿ˇ◌)/ ★,｡･:･ﾟ
-        </h1>
+        <div class='smallScreen'>
+            <h1 style="text-align: center;"> ﾟ･:ﾟ･:,｡★ ＼(◌ˇ‿ˇ◌ )♪<br/>欢迎光临<br/>♪( ◌ˇ‿ˇ◌)/ ★,｡･:･ﾟ</h1>
+        </div>
+        <div class='largeScreen'>
+            <h1 style="text-align: center;"> ﾟ･:ﾟ･:,｡★ ＼(◌ˇ‿ˇ◌ )♪ 欢迎光临 ♪( ◌ˇ‿ˇ◌)/ ★,｡･:･ﾟ</h1>
+        </div>
+        
         
         <div style="text-align: center;" id="myBtnContainer">
             <Button class="btn active" onclick="filterTag('all')">全部 ALL</Button>

@@ -10,7 +10,7 @@
             {
                 cursor: url('images/doraemonSmall.png'), default;
             }
-             
+            
             .btn
             {
                 color:black;
@@ -32,35 +32,47 @@
                 border-width: 1px;
                 border-style: solid none;
             }
-            @media screen and (max-width: 950px) 
-            {
-                .btn{width: 100%;}
-            }
-
+            
             .dispImg
             {
                 float: left;
                 background-color: blueviolet;
                 color:azure;
-                width:100px;
-                line-height: 100px;
+                width:200px;
+                line-height: 300px;
                 text-align:center;
                 margin:2px;
                 display:none;
-            }
-            .show
-            {
-                display: block;
-
             }
             .images
             {
                 margin-top:20px;
                 overflow: hidden;
             }
+            .show
+            {
+                display: block;
 
-            
+            }
 
+            @media screen and (max-width: 950px) 
+            {
+                .btn{width: 100%;}
+                .smallScreen{display:initial;}
+                .largeScreen{display:none;}
+            }
+            @media screen and (min-width: 951px) 
+            {
+                .btn{width: calc(80% / 5);}
+                .smallScreen{display:none;}
+                .largeScreen{display:initial;}
+            }
+            h1
+            {
+                text-align: center;
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
             p
             {
                 color: red;
@@ -69,9 +81,13 @@
     </head>
 
     <body>
-        <h1 style="text-align: center;">
-            ﾟ･:ﾟ･:,｡★ ＼(◌ˇ‿ˇ◌ )♪ 欢迎光临 ♪( ◌ˇ‿ˇ◌)/ ★,｡･:･ﾟ
-        </h1>
+        <div class='smallScreen'>
+            <h1> ﾟ･:ﾟ･:,｡★ ＼(◌ˇ‿ˇ◌ )♪<br/>欢迎光临<br/>♪( ◌ˇ‿ˇ◌)/ ★,｡･:･ﾟ</h1>
+        </div>
+        <div class='largeScreen'>
+            <h1> ﾟ･:ﾟ･:,｡★ ＼(◌ˇ‿ˇ◌ )♪ 欢迎光临 ♪( ◌ˇ‿ˇ◌)/ ★,｡･:･ﾟ</h1>
+        </div>
+        
         
         <div style="text-align: center;" id="myBtnContainer">
             <Button class="btn active" onclick="filterTag('all')">全部 ALL</Button>
@@ -81,6 +97,7 @@
             <Button class="btn" onclick="filterTag('misc')">其它 MISCELLANEOUS</Button>
         </div>
 
+        
         <div class="images">
             <div class="dispImg illus">A</div>
             <div class="dispImg comic design">BB</div>
@@ -94,11 +111,8 @@
             <div class="dispImg design misc">J</div>
             <div class="dispImg design">KK</div>
             <div class="dispImg design">LLL</div>
-        </div>
-
-        <p>under construction…</p>
+        </div>   
         
-
         <script>
             var btnContainer = document.getElementById("myBtnContainer");
             var btns = btnContainer.getElementsByClassName("btn");
@@ -112,6 +126,7 @@
                 })
             }
         </script>
+
 
         <script>
             filterTag("all");
@@ -149,5 +164,7 @@
                 tags.className=t.join(" ");
             }
         </script>
+
+        <p>under construction…</p>
     </body>
 </html>

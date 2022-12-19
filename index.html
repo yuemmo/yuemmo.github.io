@@ -39,11 +39,9 @@
             
             .dispImg
             {
-                float: left;
+                float:left;
                 color:azure;
-                background-color: blueviolet;
-                width: 200px;
-                line-height: 300px;
+                height: 300px;
                 margin:10px;
                 border: none;
                 outline: none;
@@ -54,12 +52,12 @@
             .dispImg:hover
             {
                 color: white;
-                background-color: peru;
+                background-color: peru !important;
             }
             .dispImg.display
             {
                 color: white;
-                background-color: palevioletred;
+                background-color: palevioletred !important;
             }
             .images
             {
@@ -73,6 +71,7 @@
                 display: block;
 
             }
+
 
             @media screen and (max-width: 950px) 
             {
@@ -101,7 +100,7 @@
 
     <body>
         <div class='smallScreen'>
-            <h1 style="font-size:3.5vw"> ﾟ･:ﾟ･:,｡★ ＼(◌ˇ‿ˇ◌ )♪<br/>欢迎光临<br/>♪( ◌ˇ‿ˇ◌)/ ★,｡･:･ﾟ</h1>
+            <h1 style="font-size:4vw"> ﾟ･:ﾟ･:,｡★ ＼(◌ˇ‿ˇ◌ )♪<br/>欢迎光临<br/>♪( ◌ˇ‿ˇ◌)/ ★,｡･:･ﾟ</h1>
         </div>
         <div class='largeScreen'>
             <h1> ﾟ･:ﾟ･:,｡★ ＼(◌ˇ‿ˇ◌ )♪ 欢迎光临 ♪( ◌ˇ‿ˇ◌)/ ★,｡･:･ﾟ</h1>
@@ -118,18 +117,76 @@
 
         
         <div class="images" id="myImgContainer" >
-            <Button class="dispImg display illus" onclick="">A</Button>
-            <Button class="dispImg comic design" onclick="">BB</Button>
-            <Button class="dispImg illus" onclick="">CCC</Button>
-            <Button class="dispImg comic" onclick="">D</Button>
-            <Button class="dispImg illus misc" onclick="">EE</Button>
-            <Button class="dispImg comic" onclick="">FFF</Button>
-            <Button class="dispImg misc" onclick="">G</Button>
-            <Button class="dispImg misc" onclick="">HH</Button>
-            <Button class="dispImg design" onclick="">III</Button>
-            <Button class="dispImg design misc" onclick="">J</Button>
-            <Button class="dispImg design" onclick="">KK</Button>
-            <Button class="dispImg design" onclick="">LLL</Button>
+
+            <Button class="dispImg display illus" style="
+                    width: 200px;
+                    background-color: red;"
+                    onclick=""
+                    ></Button>
+
+            <Button class="dispImg comic design" 
+                    style="width: 300px;
+                    background-color: orangered;"
+                    onclick=""
+                    ></Button>
+
+            <Button class="dispImg illus" 
+                    style="width: 500px;
+                    background-color: orange;"
+                    ></Button>
+
+            <Button class="dispImg comic" 
+                    style="width: 150px;
+                    background-color: yellow;" 
+                    onclick=""
+                    ></Button>
+
+            <Button class="dispImg illus misc" 
+                    style="width: 200px;
+                    background-color: yellowgreen;" 
+                    onclick=""
+                    ></Button>
+
+            <Button class="dispImg comic" 
+                    style="width: 200px;
+                    background-color: greenyellow;" 
+                    onclick=""
+                    ></Button>
+
+            <Button class="dispImg misc" 
+                    style="width: 200px;
+                    background-color: green;" 
+                    onclick=""
+                    ></Button>
+
+            <Button class="dispImg misc" 
+                    style="width: 200px;
+                    background-color: turquoise;" 
+                    onclick=""
+                    ></Button>
+
+            <Button class="dispImg design" 
+                    style="width: 200px;
+                    background-color: teal;" 
+                    onclick=""
+                    ></Button>
+
+            <Button class="dispImg design misc" 
+                    style="width: 200px;
+                    background-color: blue;"
+                    onclick=""
+                    ></Button>
+
+            <Button class="dispImg design" 
+                    style="width: 200px;
+                    background-color: purple;""
+                    ></Button>
+
+            <Button class="dispImg design" 
+                    style="width: 200px;
+                    background-color: violet;"
+                    onclick=""
+                    ></Button>
         </div>   
         
         <script>

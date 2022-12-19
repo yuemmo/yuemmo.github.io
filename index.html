@@ -12,7 +12,7 @@
             }
             body, a:hover
             {
-                cursor: url('images/doraemonSmall.png'), default;
+                cursor: url(./images/doraemonSmall.png), default;
             }
             
             .btn
@@ -24,7 +24,7 @@
                 border: none;
                 outline: none;
                 overflow: hidden;
-                cursor: url('images/doraemonSmall.png'), default;
+                cursor: url(./images/doraemonSmall.png), default;
             }
             .btn:hover
             {
@@ -39,14 +39,13 @@
             
             .dispImg
             {
-                float:left;
                 color:azure;
                 height: 300px;
                 margin:10px;
                 border: none;
                 outline: none;
                 overflow: hidden;
-                cursor: url('images/doraemonSmall.png'), default;
+                cursor: url(./images/doraemonSmall.png), default;
                 display:none;
             }
             .dispImg:hover
@@ -64,12 +63,10 @@
                 text-align: center; 
                 white-space: normal; 
                 margin-top:50px;
-                overflow: hidden;
             }
             .show
             {
-                display: block;
-
+                display: inline-block;
             }
 
 
@@ -85,6 +82,7 @@
                 .smallScreen{display:none;}
                 .largeScreen{display:initial;}
             }
+
             h1
             {
                 text-align: center;
@@ -108,85 +106,98 @@
         
         
         <div style="text-align: center;" id="myBtnContainer">
-            <Button class="btn active" onclick="filterTag('all')">全部 ALL</Button>
-            <Button class="btn" onclick="filterTag('comic')">漫画 COMICS</Button>
-            <Button class="btn" onclick="filterTag('illus')">绘画 ILLUSTRATIONS</Button>
-            <Button class="btn" onclick="filterTag('design')">设计 DESIGN</Button>
-            <Button class="btn" onclick="filterTag('misc')">其它 MISCELLANEOUS</Button>
+            <button class="btn active" onclick="filterTag('all')">全部 ALL</button>
+            <button class="btn" onclick="filterTag('comic')">漫画 COMICS</button>
+            <button class="btn" onclick="filterTag('illus')">绘画 ILLUSTRATIONS</button>
+            <button class="btn" onclick="filterTag('design')">设计 DESIGN</button>
+            <button class="btn" onclick="filterTag('misc')">其它 MISCELLANEOUS</button>
         </div>
 
         
         <div class="images" id="myImgContainer" >
 
-            <Button class="dispImg display illus" style="
+            <button class="dispImg illus" style="
                     width: 200px;
-                    background-color: red;"
-                    onclick=""
-                    ></Button>
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 200px 300px"
+                    onclick="window.location.href='https://google.com';"
+                    ></button>
 
-            <Button class="dispImg comic design" 
+            
+            <button class="dispImg comic design" 
                     style="width: 300px;
-                    background-color: orangered;"
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 300px 300px"
                     onclick=""
-                    ></Button>
+                    ></button>
 
-            <Button class="dispImg illus" 
+            <button class="dispImg illus" 
                     style="width: 500px;
-                    background-color: orange;"
-                    ></Button>
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 500px 300px"
+                    ></button>
 
-            <Button class="dispImg comic" 
+            <button class="dispImg comic" 
                     style="width: 150px;
-                    background-color: yellow;" 
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 150px 300px" 
                     onclick=""
-                    ></Button>
+                    ></button>
 
-            <Button class="dispImg illus misc" 
+            <button class="dispImg illus misc" 
                     style="width: 200px;
-                    background-color: yellowgreen;" 
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 200px 300px" 
                     onclick=""
-                    ></Button>
+                    ></button>
 
-            <Button class="dispImg comic" 
+            <button class="dispImg comic" 
                     style="width: 200px;
-                    background-color: greenyellow;" 
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 200px 300px" 
                     onclick=""
-                    ></Button>
+                    ></button>
 
-            <Button class="dispImg misc" 
+            <button class="dispImg misc" 
                     style="width: 200px;
-                    background-color: green;" 
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 200px 300px" 
                     onclick=""
-                    ></Button>
+                    ></button>
 
-            <Button class="dispImg misc" 
+            <button class="dispImg misc" 
                     style="width: 200px;
-                    background-color: turquoise;" 
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 200px 300px" 
                     onclick=""
-                    ></Button>
+                    ></button>
 
-            <Button class="dispImg design" 
+            <button class="dispImg design" 
                     style="width: 200px;
-                    background-color: teal;" 
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 200px 300px" 
                     onclick=""
-                    ></Button>
+                    ></button>
 
-            <Button class="dispImg design misc" 
+            <button class="dispImg design misc" 
                     style="width: 200px;
-                    background-color: blue;"
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 200px 300px"
                     onclick=""
-                    ></Button>
+                    ></button>
 
-            <Button class="dispImg design" 
+            <button class="dispImg design" 
                     style="width: 200px;
-                    background-color: purple;""
-                    ></Button>
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 200px 300px"
+                    ></button>
 
-            <Button class="dispImg design" 
+            <button class="dispImg design" 
                     style="width: 200px;
-                    background-color: violet;"
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 200px 300px"
                     onclick=""
-                    ></Button>
+                    ></button>
         </div>   
         
         <script>
@@ -202,7 +213,6 @@
                 })
             }
         </script>
-
 
         <script>
             filterTag("all");

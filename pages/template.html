@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>portfolio</title>
+        <link rel="icon" type="image/x-icon" href="images/doraemon.png">
+        <style>
+            *
+            {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            body, a:hover
+            {
+                cursor: url(./images/doraemonSmall.png), default;
+            }
+
+            @media screen and (max-width: 950px) 
+            {
+                .smallScreen{display:initial;}
+                .largeScreen{display:none;}
+            }
+            @media screen and (min-width: 951px) 
+            {
+                .smallScreen{display:none;}
+                .largeScreen{display:initial;}
+            }
+
+            h1
+            {
+                text-align: center;
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+            p
+            {
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class='smallScreen'>
+            <h1 style="font-size:4vw"> ﾟ･:ﾟ･:,｡★ ＼(◌ˇ‿ˇ◌ )♪<br/>欢迎光临<br/>♪( ◌ˇ‿ˇ◌)/ ★,｡･:･ﾟ</h1>
+        </div>
+        <div class='largeScreen'>
+            <h1> ﾟ･:ﾟ･:,｡★ ＼(◌ˇ‿ˇ◌ )♪ 欢迎光临 ♪( ◌ˇ‿ˇ◌)/ ★,｡･:･ﾟ</h1>
+        </div>
+
+        <p>under construction…</p>
+    </body>
+</html>

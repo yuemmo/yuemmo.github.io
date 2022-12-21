@@ -12,7 +12,7 @@
             }
             body, a:hover
             {
-                cursor: url(images/doraemonSmall.png), default;
+                cursor: url(../images/doraemonSmall.png), default;
             }
 
             #banner
@@ -23,7 +23,7 @@
             }
             .redirect
             {
-                cursor: url(images/doraemonSmall.png), default;
+                cursor: url(../images/doraemonSmall.png), default;
                 overflow: hidden;
                 border: none;
                 outline: none;
@@ -44,17 +44,47 @@
                 text-align: center;
             }
 
+            .collapsible
+            {
+                cursor: url(../images/doraemonSmall.png), default;
+                background-color: #9FB0EA;
+                border: none;
+                outline: none;
+                padding: 15px;
+                text-align: center;
+                color: white;
+                font-size: 15px;
+            }
+            .active,.collapsible:hover 
+            {
+                cursor: url(../images/doraemonSmall.png), default;
+                background-color: #eae69f;
+                color: black;
+            }
+            .info 
+            {
+                cursor: url(../images/doraemonSmall.png), default;
+                display: none;
+                overflow: hidden;
+                background-color: whitesmoke;
+                overflow-wrap: break-word;
+            }
+
             @media screen and (max-width: 950px) 
             {
-                img{width:90%;}
                 .smallScreen{display:initial;}
                 .largeScreen{display:none;}
+                .collapsible{width:45%;}
+                .info{width:45%;}
+                img{width:90%;}
             }
             @media screen and (min-width: 951px) 
             {
-                img{width:900px}
                 .smallScreen{display:none;}
                 .largeScreen{display:initial;}
+                .collapsible{width:450px;}
+                .info{width:450px;}
+                img{width:900px}
             }
         </style>
     </head>
@@ -71,23 +101,52 @@
         </div>
 
 
-        <div class='smallScreen'>
+        <div class="smallScreen">
             <h1 style="font-size:4vw"> ﾟ･:ﾟ･:,｡★ ＼(◌ˇ‿ˇ◌ )♪<br/>欢迎光临<br/>♪( ◌ˇ‿ˇ◌)/ ★,｡･:･ﾟ</h1>
         </div>
-        <div class='largeScreen'>
+        <div class="largeScreen">
             <h1> ﾟ･:ﾟ･:,｡★ ＼(◌ˇ‿ˇ◌ )♪ 欢迎光临 ♪( ◌ˇ‿ˇ◌)/ ★,｡･:･ﾟ</h1>
         </div>
     </header>
 
     <body>
         <div style="text-align:center;">
-            <p>this is doraemon. drawn in clip studio paint!</p>
+            <button class="collapsible">MORE INFO</button>
+            <br>
+            <div class="info">
+                <p style="padding: 0px 15px; text-align:center; font-size:13px;"
+                ><b>"doraemon"</b><br
+                ><em>2018/01/01</em><br
+                ><em>clip studio paint</em><br
+                >this is doraemon!</p>
+            </div>
         </div>
 
         <div style="text-align:center;">
-            <img src="../images/doraemon.png" alt="doreaemon"/>
+            <img 
+            style="padding-top:50px;"
+            src="../images/doraemon.png" 
+            alt="doreaemon"/>
         </div>
-
-        <p style="color: red;">under construction…</p>
     </body>
+
+    <script>
+        var expand = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < expand.length; i++)
+        {
+            expand[i].addEventListener("click", function()
+            {
+                this.classList.toggle("active");
+                var content = document.getElementsByClassName("info");
+                if (content[0].style.display == "inline-block")
+                {
+                    content[0].style.display = "none";
+                }
+                else
+                {
+                    content[0].style.display = "inline-block";
+                }
+            });
+        }
+    </script>
 </html>

@@ -12,99 +12,127 @@
             }
             body, a:hover
             {
-                cursor: url(./images/doraemonSmall.png), default;
+                cursor: url(images/doraemonSmall.png), default;
+            }
+
+            #banner
+            {
+                width: 100%;
+                height: 30px;
+                background: #9FB0EA;
+            }
+            .redirect
+            {
+                cursor: url(images/doraemonSmall.png), default;
+                overflow: hidden;
+                border: none;
+                outline: none;
+                padding-top: 5px;
+                background-color: transparent;
+                font-size:15px;
+                color:white;
+            }
+            .redirect:hover
+            {
+                transition: 0.5s;
+                color: #eae69f;
+            }
+            h1
+            {
+                padding-top: 50px;
+                padding-bottom: 50px;
+                text-align: center;
             }
             
             .btn
             {
-                color:black;
-                background-color: white;
-                padding: 10px 10px;
-                width: calc(80% / 5);
+                cursor: url(images/doraemonSmall.png), default;
+                overflow: hidden;
                 border: none;
                 outline: none;
-                overflow: hidden;
-                cursor: url(./images/doraemonSmall.png), default;
+                width: calc(80% / 5);
+                padding: 10px 10px;
+                background-color: white;
+                color:black;                
             }
             .btn:hover
             {
-                color: white;
+                transition: 0.5s;
                 background-color: black;
+                color: white;
             }
             .btn.active
             {
-                border-width: 1px;
                 border-style: solid none;
+                border-width: 1px;
             }
-            
+
+            .images
+            {
+                white-space: normal;
+                padding-left: 10%;
+                padding-right: 10%; 
+                margin-top: 50px;
+                text-align: center; 
+            }
             .dispImg
             {
-                color:azure;
-                height: 300px;
-                margin:10px;
-                border: none;
-                outline: none;
-                overflow: hidden;
-                cursor: url(./images/doraemonSmall.png), default;
+                cursor: url(images/doraemonSmall.png), default;
                 display:none;
+                overflow: hidden;
+                border: none;
+                margin:10px;
+                outline: none;
+                height: 300px;
+                color:azure;
             }
             .dispImg:hover
             {
-                color: white;
-                background-color: peru !important;
-            }
-            .dispImg.display
-            {
-                color: white;
-                background-color: palevioletred !important;
-            }
-            .images
-            {
-                text-align: center; 
-                white-space: normal; 
-                margin-top:50px;
+                transition: 0.5s;
+                opacity:0.6;
+                background-color: #eae69f !important;
+                color: white;    
             }
             .show
             {
                 display: inline-block;
             }
 
-
             @media screen and (max-width: 950px) 
             {
-                .btn{width: 100%;}
                 .smallScreen{display:initial;}
                 .largeScreen{display:none;}
+                .btn{width: 100%;}
             }
             @media screen and (min-width: 951px) 
             {
-                .btn{width: calc(80% / 5);}
                 .smallScreen{display:none;}
                 .largeScreen{display:initial;}
-            }
-
-            h1
-            {
-                text-align: center;
-                padding-top: 50px;
-                padding-bottom: 50px;
-            }
-            p
-            {
-                color: red;
+                .btn{width: calc(80% / 5);}
             }
         </style>
     </head>
 
-    <body>
+    <header>
+        <div id="banner">
+            <button class="redirect" style="float:left; padding-left:10%;"
+            onclick="location.href='index.html';"
+            >HOME</button>
+
+            <button class="redirect" style="float:right; padding-right:10%;"
+            onclick="location.href='about.html';"
+            >ABOUT</button>
+        </div>
+
         <div class='smallScreen'>
             <h1 style="font-size:4vw"> ﾟ･:ﾟ･:,｡★ ＼(◌ˇ‿ˇ◌ )♪<br/>欢迎光临<br/>♪( ◌ˇ‿ˇ◌)/ ★,｡･:･ﾟ</h1>
         </div>
         <div class='largeScreen'>
             <h1> ﾟ･:ﾟ･:,｡★ ＼(◌ˇ‿ˇ◌ )♪ 欢迎光临 ♪( ◌ˇ‿ˇ◌)/ ★,｡･:･ﾟ</h1>
         </div>
-        
-        
+    </header>
+
+    <body>
         <div style="text-align: center;" id="myBtnContainer">
             <button class="btn active" onclick="filterTag('all')">全部 ALL</button>
             <button class="btn" onclick="filterTag('comic')">漫画 COMICS</button>
@@ -113,89 +141,73 @@
             <button class="btn" onclick="filterTag('misc')">其它 MISCELLANEOUS</button>
         </div>
 
-        
         <div class="images" id="myImgContainer" >
-
             <button class="dispImg illus" style="
+                    width: 200px;
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 200px 300px;"
+                    onclick="location.href='pages/template.html';"></button>
+            <button class="dispImg comic design" style="
+                    width: 300px;
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 300px 300px;"
+                    onclick="location.href='pages/template.html';"></button>
+            <button class="dispImg illus" style="
+                    width: 500px;
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 500px 300px;"
+                    onclick="location.href='pages/template.html';"
+                    ></button>
+            <button class="dispImg comic" style="
+                    width: 150px;
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 150px 300px" 
+                    onclick="location.href='pages/template.html';"
+                    ></button>
+            <button class="dispImg illus misc" style="
+                    width: 200px;
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 200px 300px" 
+                    onclick="location.href='pages/template.html';"
+                    ></button>
+            <button class="dispImg comic" style="
+                    width: 200px;
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 200px 300px" 
+                    onclick="location.href='pages/template.html';"
+                    ></button>
+            <button class="dispImg misc" style="
+                    width: 200px;
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 200px 300px" 
+                    onclick="location.href='pages/template.html';"
+                    ></button>
+            <button class="dispImg misc" style="
+                    width: 200px;
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 200px 300px" 
+                    onclick="location.href='pages/template.html';"
+                    ></button>
+            <button class="dispImg design" style="
+                    width: 200px;
+                    background: url(./images/doraemon.png) no-repeat;
+                    background-size: 200px 300px" 
+                    onclick="location.href='pages/template.html';"
+                    ></button>
+            <button class="dispImg design misc" style="
                     width: 200px;
                     background: url(./images/doraemon.png) no-repeat;
                     background-size: 200px 300px"
                     onclick="location.href='pages/template.html';"
                     ></button>
-
-            
-            <button class="dispImg comic design" 
-                    style="width: 300px;
-                    background: url(./images/doraemon.png) no-repeat;
-                    background-size: 300px 300px"
-                    onclick="location.href='pages/template.html';"
-                    ></button>
-
-            <button class="dispImg illus" 
-                    style="width: 500px;
-                    background: url(./images/doraemon.png) no-repeat;
-                    background-size: 500px 300px"
-                    onclick="location.href='pages/template.html';"
-                    ></button>
-
-            <button class="dispImg comic" 
-                    style="width: 150px;
-                    background: url(./images/doraemon.png) no-repeat;
-                    background-size: 150px 300px" 
-                    onclick="location.href='pages/template.html';"
-                    ></button>
-
-            <button class="dispImg illus misc" 
-                    style="width: 200px;
-                    background: url(./images/doraemon.png) no-repeat;
-                    background-size: 200px 300px" 
-                    onclick="location.href='pages/template.html';"
-                    ></button>
-
-            <button class="dispImg comic" 
-                    style="width: 200px;
-                    background: url(./images/doraemon.png) no-repeat;
-                    background-size: 200px 300px" 
-                    onclick="location.href='pages/template.html';"
-                    ></button>
-
-            <button class="dispImg misc" 
-                    style="width: 200px;
-                    background: url(./images/doraemon.png) no-repeat;
-                    background-size: 200px 300px" 
-                    onclick="location.href='pages/template.html';"
-                    ></button>
-
-            <button class="dispImg misc" 
-                    style="width: 200px;
-                    background: url(./images/doraemon.png) no-repeat;
-                    background-size: 200px 300px" 
-                    onclick="location.href='pages/template.html';"
-                    ></button>
-
-            <button class="dispImg design" 
-                    style="width: 200px;
-                    background: url(./images/doraemon.png) no-repeat;
-                    background-size: 200px 300px" 
-                    onclick="location.href='pages/template.html';"
-                    ></button>
-
-            <button class="dispImg design misc" 
-                    style="width: 200px;
+            <button class="dispImg design" style="
+                    width: 200px;
                     background: url(./images/doraemon.png) no-repeat;
                     background-size: 200px 300px"
                     onclick="location.href='pages/template.html';"
                     ></button>
-
-            <button class="dispImg design" 
-                    style="width: 200px;
-                    background: url(./images/doraemon.png) no-repeat;
-                    background-size: 200px 300px"
-                    onclick="location.href='pages/template.html';"
-                    ></button>
-
-            <button class="dispImg design" 
-                    style="width: 200px;
+            <button class="dispImg design" style="
+                    width: 200px;
                     background: url(./images/doraemon.png) no-repeat;
                     background-size: 200px 300px"
                     onclick="location.href='pages/template.html';"
@@ -252,7 +264,5 @@
                 tags.className=t.join(" ");
             }
         </script>
-
-        <p>under construction…</p>
     </body>
 </html>

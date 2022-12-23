@@ -44,15 +44,25 @@
                 text-align: center;
             }
 
+            .description
+            {
+                height: auto;
+                margin-right: auto;
+                margin-left: auto;
+                overflow-wrap: break-word;
+            }
+
             @media screen and (max-width: 950px) 
             {
                 .smallScreen{display:initial;}
                 .largeScreen{display:none;}
+                .description{width: 50%;}
             }
             @media screen and (min-width: 951px) 
             {
                 .smallScreen{display:none;}
                 .largeScreen{display:initial;}
+                .description{width: 500px;}
             }
         </style>
     </head>
@@ -77,6 +87,23 @@
     </header>
 
     <body>
-        <p>under construction…</p>
+        <div class="description">
+            <h2>YUEMMO</h2>
+            <p>eng/中文 | full-time student | i like to draw</p>
+            
+            <p style="line-height:1.75;"
+            ><a href="https://discordapp.com/users/477587053488635915/">contact</a><br
+            ><a href="https://archiveofourown.org/users/yuemmo">ao3</a><br
+            ><a href="https://www.artstation.com/yuemmo">artstation</a><br
+            ><a href="https://yuemmo.lofter.com/">lofter</a><br
+            ><a href="https://www.pixiv.net/en/users/59027641">pixiv</a><br
+            ><a href="https://yuemmo.tumblr.com/">tumblr</a><br
+            ><a href="https://twitter.com/yuemmo_">twitter</a><br
+            ><!--ins yt bili--></p>
+            
+            <p><em>digital</em>: clip studio paint, adobe photoshop, krita, adobe illustrator, fire alpaca.<br
+            ><em>web dev</em>: html/css/js, figma.<br
+            ><em>fine art</em>: graphite/colored pencil, pen/ink, gouache, watercolor, acrylic, papier mache, ceramic. </p>
+        </div>
     </body>
 </html>
